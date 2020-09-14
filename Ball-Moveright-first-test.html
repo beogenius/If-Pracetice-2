@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BALL-MOVE</title>
+</head>
+<body>
+<form action="" method="post">
+    <img id="myIMG" style="width: 300px" src="https://images.daznservices.com/di/library/GOAL/1/ed/lionel-messi-barcelona-18082018_p3admnqqxdxt1mfmwb0o3j5zh.jpg?t=-7487777&amp;quality=60&amp;w=1600" alt="messi">
+    <p> Click button below to move the image</p>
+    <input type="button" value="click me" onclick="moveRight()">
+</form>
+</body>
+</html>
+<script>
+    let imgobj = null;
+    imgobj = document.getElementById('myIMG');
+    function init(){
+        imgobj = document.getElementById('myIMG');
+        imgobj.style.position='relative';
+        imgobj.style.left='0px';
+    }
+    function moveRight(){
+        imgobj.style.left=parseInt(imgobj.style.left)+ 10 +'px';
+    }
+    window.onload=init();
+</script>
